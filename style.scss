@@ -7,31 +7,43 @@
 
 .navbar {
     height: 40vh;
-    background: linear-gradient(to bottom, #4568dc, #b06ab3);
+    background-image: linear-gradient(
+        to right bottom,
+        #d978f4,
+        #aa8cff,
+        #769aff,
+        #42a4fc,
+        #12a9eb
+    );
     .navbarUpper {
         display: flex;
         align-items: baseline;
         justify-content: space-between;
 
         .title {
+            margin-top: 2vh;
             color: rgb(255, 255, 255);
             font-weight: bold;
             margin-left: 1em;
-            height: 6vh;
-            width: 40vw;
-            padding: 5px;
+            padding: 1vh 4vw;
             border-radius: 10px;
             display: block;
-            background: linear-gradient(to bottom, #454fdc, #655ebe);
-            filter: drop-shadow(3px 3px 10px #323aac);
+            background-image: linear-gradient(
+                to right bottom,
+                #d978f4,
+                #aa8cff
+            );
+            filter: drop-shadow(3px 3px 20px #7e43c2);
+            background: opacity(0.5);
             h1 {
                 text-align: center;
             }
         }
         .date {
             color: white;
-            font-size: 20px;
+            font-size: 25px;
             margin-right: 5vw;
+            font-weight: bold;
         }
     }
 
@@ -40,11 +52,11 @@
             display: flex;
             margin: 0 3vw;
             justify-content: space-between;
-            margin-top: 27vh;
+            margin-top: 23vh;
             li {
                 list-style: none;
                 padding: 3px;
-                filter: drop-shadow(0 0 10px);
+                padding-bottom: 5px;
                 h1 {
                     font-size: 15px;
                     color: white;
@@ -66,27 +78,73 @@
 }
 
 .input {
-    margin-top: 10vh;
+    margin-top: 3vh;
+    padding: 0 5vw;
+    height: 4vh;
+    justify-content: space-around;
+    align-items: center;
     display: flex;
     align-items: center;
-    height: 5vh;
-    .inputElement {
-        font-size: 10px;
+    width: 100vw;
+
+    input {
+        padding: 5px;
+        border: none;
+        background: rgb(231, 231, 231);
+        border-radius: 20px;
+        height: 100%;
+    }
+    .textInput {
+        padding: 5px 10px;
+        width: 60vw;
+    }
+    .inputDateDiv {
+        height: 100%;
+        align-items: center;
+        .dateInput {
+            text-align: center;
+            width: 15vw;
+        }
+        .listOfDay {
+            width: 15vw;
+            margin-top: 20px;
+            position: absolute;
+            text-align: center;
+            opacity: 0;
+            background: rgb(231, 231, 231);
+            border-radius: 10px;
+            ul {
+                li {
+                    cursor: pointer;
+                    list-style: none;
+                    font-size: 20px;
+                    margin-top: 0.5em;
+                }
+                margin-bottom: 0.5em;
+            }
+        }
     }
 
-    .addButton {
-        position: relative;
-        height: 100%;
-        div {
-            position: absolute;
-            content: "";
-            height: 20px;
-            width: 4px;
-            border-radius: 2px;
-            background-color: black;
-        }
-        .orizontal {
-            rotate: 90deg;
+    button {
+        cursor: pointer;
+        border: none;
+        width: 34px;
+        height: 34px;
+        background-image: linear-gradient(
+            to left bottom,
+            #d978f4,
+            #959bff,
+            #3bb4ff,
+            #00c4ff,
+            #12cfeb
+        );
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        img {
+            height: 70%;
+            width: 70%;
         }
     }
 }

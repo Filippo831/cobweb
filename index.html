@@ -6,6 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Document</title>
         <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <nav class="navbar">
@@ -19,19 +23,70 @@
             </div>
         </nav>
 
-        <section class="input">
-            <input class="inputElement" type="text" placeholder="inerisci..." />
-            <div class="addButton">
-                <div class="orizontal"></div>
-                <div class="vertical"></div>
+        <form action="" class="input">
+            <input
+                class="textInput"
+                type="text"
+                name="inputText"
+                placeholder="scrivi..."
+            />
+            <div class="inputDateDiv">
+                <input
+                    class="dateInput"
+                    type="text"
+                    name="inputDate"
+                    placeholder="DAY"
+                />
+                <div class="listOfDay">
+                    <ul class="listOfDayUl"></ul>
+                </div>
             </div>
-        </section>
+
+            <button class="submitForm">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 172 172"
+                    style=" fill:#000000;"
+                >
+                    <g transform="">
+                        <g
+                            fill="none"
+                            fill-rule="none"
+                            stroke="none"
+                            stroke-width="1"
+                            stroke-linecap="butt"
+                            stroke-linejoin="miter"
+                            stroke-miterlimit="10"
+                            stroke-dasharray=""
+                            stroke-dashoffset="0"
+                            font-family="none"
+                            font-weight="none"
+                            font-size="none"
+                            text-anchor="none"
+                            style="mix-blend-mode: normal"
+                        >
+                            <path
+                                d="M0,172v-172h172v172z"
+                                fill="none"
+                                fill-rule="nonzero"
+                            ></path>
+                            <g fill="#ffffff" fill-rule="evenodd">
+                                <path
+                                    d="M78.83333,14.33333v64.5h-64.5v14.33333h64.5v64.5h14.33333v-64.5h64.5v-14.33333h-64.5v-64.5z"
+                                ></path>
+                            </g>
+                            <path d="" fill="none" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+        </form>
 
         <script src="app.js"></script>
-
-        <link
-            href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
-            rel="stylesheet"
-        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
     </body>
 </html>
