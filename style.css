@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.navbar {
+  height: 40vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(#4568dc), to(#b06ab3));
+  background: linear-gradient(to bottom, #4568dc, #b06ab3);
+}
+
+.navbar .navbarUpper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .navbarUpper .title {
+  color: white;
+  font-weight: bold;
+  margin-left: 1em;
+  height: 6vh;
+  width: 40vw;
+  padding: 5px;
+  border-radius: 10px;
+  display: block;
+  background: -webkit-gradient(linear, left top, left bottom, from(#454fdc), to(#655ebe));
+  background: linear-gradient(to bottom, #454fdc, #655ebe);
+  -webkit-filter: drop-shadow(3px 3px 10px #323aac);
+          filter: drop-shadow(3px 3px 10px #323aac);
+}
+
+.navbar .navbarUpper .title h1 {
+  text-align: center;
+}
+
+.navbar .navbarUpper .date {
+  color: white;
+  font-size: 20px;
+  margin-right: 5vw;
+}
+
+.navbar .calendar .calendarWeekDays {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 3vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 27vh;
+}
+
+.navbar .calendar .calendarWeekDays li {
+  list-style: none;
+  padding: 3px;
+  -webkit-filter: drop-shadow(0 0 10px);
+          filter: drop-shadow(0 0 10px);
+}
+
+.navbar .calendar .calendarWeekDays li h1 {
+  font-size: 15px;
+  color: white;
+}
+
+.navbar .calendar .calendarWeekDays li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbar .calendar .calendarWeekDays li div div {
+  content: none;
+  height: 5px;
+  width: 5px;
+  background: white;
+  border-radius: 50%;
+}
+
+.input {
+  margin-top: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5vh;
+}
+
+.input .inputElement {
+  font-size: 10px;
+}
+
+.input .addButton {
+  position: relative;
+  height: 100%;
+}
+
+.input .addButton div {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 4px;
+  border-radius: 2px;
+  background-color: black;
+}
+
+.input .addButton .orizontal {
+  rotate: 90deg;
+}
+/*# sourceMappingURL=style.css.map */

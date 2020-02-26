@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+.navbar {
+    height: 40vh;
+    background: linear-gradient(to bottom, #4568dc, #b06ab3);
+    .navbarUpper {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+
+        .title {
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            margin-left: 1em;
+            height: 6vh;
+            width: 40vw;
+            padding: 5px;
+            border-radius: 10px;
+            display: block;
+            background: linear-gradient(to bottom, #454fdc, #655ebe);
+            filter: drop-shadow(3px 3px 10px #323aac);
+            h1 {
+                text-align: center;
+            }
+        }
+        .date {
+            color: white;
+            font-size: 20px;
+            margin-right: 5vw;
+        }
+    }
+
+    .calendar {
+        .calendarWeekDays {
+            display: flex;
+            margin: 0 3vw;
+            justify-content: space-between;
+            margin-top: 27vh;
+            li {
+                list-style: none;
+                padding: 3px;
+                filter: drop-shadow(0 0 10px);
+                h1 {
+                    font-size: 15px;
+                    color: white;
+                }
+                div {
+                    display: flex;
+                    justify-content: space-around;
+                    div {
+                        content: none;
+                        height: 5px;
+                        width: 5px;
+                        background: white;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.input {
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    height: 5vh;
+    .inputElement {
+        font-size: 10px;
+    }
+
+    .addButton {
+        position: relative;
+        height: 100%;
+        div {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 4px;
+            border-radius: 2px;
+            background-color: black;
+        }
+        .orizontal {
+            rotate: 90deg;
+        }
+    }
+}
