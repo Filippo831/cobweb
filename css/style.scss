@@ -7,14 +7,6 @@
 
 .navbar {
     height: 40vh;
-    background-image: linear-gradient(
-        to right bottom,
-        #d978f4,
-        #aa8cff,
-        #769aff,
-        #42a4fc,
-        #12a9eb
-    );
     .navbarUpper {
         display: flex;
         align-items: baseline;
@@ -28,11 +20,6 @@
             padding: 1vh 4vw;
             border-radius: 10px;
             display: block;
-            background-image: linear-gradient(
-                to right bottom,
-                #d978f4,
-                #aa8cff
-            );
             filter: drop-shadow(3px 3px 20px #7e43c2);
             background: opacity(0.5);
             h1 {
@@ -130,7 +117,7 @@
         border: none;
         width: 34px;
         height: 34px;
-        background-image: linear-gradient(
+        background: linear-gradient(
             to left bottom,
             #d978f4,
             #959bff,

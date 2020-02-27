@@ -8,8 +8,6 @@
 
 .navbar {
   height: 40vh;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#d978f4), color-stop(#aa8cff), color-stop(#769aff), color-stop(#42a4fc), to(#12a9eb));
-  background-image: linear-gradient(to right bottom, #d978f4, #aa8cff, #769aff, #42a4fc, #12a9eb);
 }
 
 .navbar .navbarUpper {
@@ -32,8 +30,6 @@
   padding: 1vh 4vw;
   border-radius: 10px;
   display: block;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#d978f4), to(#aa8cff));
-  background-image: linear-gradient(to right bottom, #d978f4, #aa8cff);
   -webkit-filter: drop-shadow(3px 3px 20px #7e43c2);
           filter: drop-shadow(3px 3px 20px #7e43c2);
   background: opacity(0.5);
@@ -155,8 +151,8 @@
   border: none;
   width: 34px;
   height: 34px;
-  background-image: -webkit-gradient(linear, right top, left bottom, from(#d978f4), color-stop(#959bff), color-stop(#3bb4ff), color-stop(#00c4ff), to(#12cfeb));
-  background-image: linear-gradient(to left bottom, #d978f4, #959bff, #3bb4ff, #00c4ff, #12cfeb);
+  background: -webkit-gradient(linear, right top, left bottom, from(#d978f4), color-stop(#959bff), color-stop(#3bb4ff), color-stop(#00c4ff), to(#12cfeb));
+  background: linear-gradient(to left bottom, #d978f4, #959bff, #3bb4ff, #00c4ff, #12cfeb);
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
