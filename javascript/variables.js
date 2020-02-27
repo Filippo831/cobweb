@@ -1,5 +1,3 @@
-let PostArray = [];
-
 //  set the current date
 let weekDay = new Date().getUTCDay();
 let days = ["LUN", "MAR", "MER", "GIO", "VEN", "SAB", "DOM"];
@@ -52,24 +50,6 @@ daysList.addEventListener("click", () => {
 });
 
 //  get things on the form
-let textInput = document.querySelector(".textInput");
-let button = document.querySelector(".submitForm");
-button.addEventListener("click", event => {
-    event.preventDefault();
-    let inputs = document.querySelector(".input");
-    let formData = new FormData(inputs);
-    let inputText = formData.get("inputText");
-    let inputDate = formData.get("inputDate");
-
-    let newObjectList = {
-        inputText,
-        inputDate
-    };
-    PostArray.push(newObjectList);
-    console.log(newObjectList);
-    dateInput.value = "";
-    textInput.value = "";
-});
 
 function dayShowBar() {
     dateInput.addEventListener("focusin", () => {
