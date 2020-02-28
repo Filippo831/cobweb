@@ -7,6 +7,7 @@
 
 .navbar {
     height: 40vh;
+
     .navbarUpper {
         display: flex;
         align-items: baseline;
@@ -21,10 +22,12 @@
             border-radius: 10px;
             display: block;
             background: opacity(0.5);
+
             h1 {
                 text-align: center;
             }
         }
+
         .date {
             color: white;
             font-size: 25px;
@@ -39,17 +42,21 @@
             margin: 0 3vw;
             justify-content: space-between;
             margin-top: 23vh;
+
             li {
                 list-style: none;
                 padding: 3px;
                 padding-bottom: 5px;
+
                 h1 {
                     font-size: 15px;
                     color: white;
                 }
+
                 div {
                     display: flex;
                     justify-content: space-around;
+
                     div {
                         content: none;
                         height: 5px;
@@ -80,17 +87,21 @@
         border-radius: 20px;
         height: 100%;
     }
+
     .textInput {
         padding: 5px 10px;
         width: 60vw;
     }
+
     .inputDateDiv {
         height: 100%;
         align-items: center;
+
         .dateInput {
             text-align: center;
             width: 15vw;
         }
+
         .listOfDay {
             width: 15vw;
             margin-top: 20px;
@@ -99,6 +110,7 @@
             opacity: 0;
             background: rgb(231, 231, 231);
             border-radius: 10px;
+
             ul {
                 li {
                     cursor: pointer;
@@ -106,6 +118,7 @@
                     font-size: 20px;
                     margin-top: 0.5em;
                 }
+
                 margin-bottom: 0.5em;
             }
         }
@@ -116,21 +129,19 @@
         border: none;
         width: 34px;
         height: 34px;
-        background: linear-gradient(
-            to left bottom,
-            #d978f4,
-            #959bff,
-            #3bb4ff,
-            #00c4ff,
-            #12cfeb
-        );
+        background: linear-gradient(to left bottom,
+                #d978f4,
+                #959bff,
+                #3bb4ff,
+                #00c4ff,
+                #12cfeb);
         border-radius: 50%;
         display: flex;
-        align-items: center;
-        justify-content: space-around;
-        img {
+        justify-content: center;
+
+        svg {
             height: 70%;
-            width: 70%;
+            fill: white;
         }
     }
 }

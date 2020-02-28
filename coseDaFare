@@ -1,14 +1,3 @@
 - modificare layout calendario
-- modificare background in base all'ora e al tempo
-
-
-
-colori per sfondo 
-
-notte = R:0 G:0 B:100 6 
-giorno R:100 G:200 B:200 14
-sera = R:200 G:100 B:100 18
-notte = R:0 G:0 B:100 24
-
-100 200 200
-160 140 190
+- creare icone tempo personalizzate 
+- 

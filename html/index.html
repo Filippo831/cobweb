@@ -1,94 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Document</title>
-        <link rel="stylesheet" href="../css/style.css" />
-        <link
-            href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="navbarUpper">
-                <div class="title"><h1>TODO LIST</h1></div>
-                <div class="date"><p class="date"></p></div>
-            </div>
 
-            <div class="calendar">
-                <ul class="calendarWeekDays"></ul>
-            </div>
-        </nav>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+</head>
 
-        <form action="" class="input">
-            <input
-                class="textInput"
-                type="text"
-                name="inputText"
-                placeholder="scrivi..."
-            />
-            <div class="inputDateDiv">
-                <input
-                    class="dateInput"
-                    type="text"
-                    name="inputDate"
-                    placeholder="DAY"
-                />
-                <div class="listOfDay">
-                    <ul class="listOfDayUl"></ul>
-                </div>
+<body>
+    <nav class="navbar">
+        <div class="navbarUpper">
+            <div class="title">
+                <h1>TODO LIST</h1>
             </div>
+            <div class="date">
+                <p class="date"></p>
+            </div>
+        </div>
 
-            <button class="submitForm">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    x="0px"
-                    y="0px"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 172 172"
-                    style=" fill:#000000;"
-                >
-                    <g transform="">
-                        <g
-                            fill="none"
-                            fill-rule="none"
-                            stroke="none"
-                            stroke-width="1"
-                            stroke-linecap="butt"
-                            stroke-linejoin="miter"
-                            stroke-miterlimit="10"
-                            stroke-dasharray=""
-                            stroke-dashoffset="0"
-                            font-family="none"
-                            font-weight="none"
-                            font-size="none"
-                            text-anchor="none"
-                            style="mix-blend-mode: normal"
-                        >
-                            <path
-                                d="M0,172v-172h172v172z"
-                                fill="none"
-                                fill-rule="nonzero"
-                            ></path>
-                            <g fill="#ffffff" fill-rule="evenodd">
-                                <path
-                                    d="M78.83333,14.33333v64.5h-64.5v14.33333h64.5v64.5h14.33333v-64.5h64.5v-14.33333h-64.5v-64.5z"
-                                ></path>
-                            </g>
-                            <path d="" fill="none" fill-rule="nonzero"></path>
-                        </g>
+        <div class="calendar">
+            <ul class="calendarWeekDays"></ul>
+        </div>
+    </nav>
+
+    <form action="" class="input">
+        <input class="textInput" type="text" name="inputText" placeholder="scrivi..." />
+        <div class="inputDateDiv">
+            <input class="dateInput" type="text" name="inputDate" placeholder="DAY" />
+            <div class="listOfDay">
+                <ul class="listOfDayUl"></ul>
+            </div>
+        </div>
+
+        <button class="submitForm">
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                <g>
+                    <g>
+                        <path
+                            d="M492,236H276V20c0-11.046-8.954-20-20-20c-11.046,0-20,8.954-20,20v216H20c-11.046,0-20,8.954-20,20s8.954,20,20,20h216
+                            v216c0,11.046,8.954,20,20,20s20-8.954,20-20V276h216c11.046,0,20-8.954,20-20C512,244.954,503.046,236,492,236z" />
                     </g>
-                </svg>
-            </button>
-        </form>
+                </g>
+            </svg>
 
-        <script src="../javascript/wheather.js"></script>
-        <script src="../javascript/variables.js"></script>
-        <script src="../javascript/input.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
-    </body>
+        </button>
+    </form>
+
+    <script src="../javascript/weather.js"></script>
+    <script src="../javascript/variables.js"></script>
+    <script src="../javascript/input.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
+</body>
+
 </html>

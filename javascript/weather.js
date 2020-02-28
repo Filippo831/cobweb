@@ -1,16 +1,21 @@
 let backgroundImage = document.querySelector(".navbar").style;
 let titleBackground = document.querySelector(".title").style;
-const key = "6370b6fcccf73f8ca1d58861c6f5915e";
 let longitudine;
 let latitudine;
+
+
+
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
         console.log("HAI DATO I PERMESSI");
         console.log(position);
         longitudine = position.coords.longitude;
         latitudine = position.coords.latitude;
-        const api = `api.openweathermap.org/data/2.5/weather?lat=${latitudine}&lon=${longitudine}&appid=${key}`;
+        const key = "074f76e00017c3f922cb5f58cdf8d984";
+        const proxy = 'https://cors-anywhere.herokuapp.com/';
+        const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${latitudine}&lon=${longitudine}&appid=${key}`;
         console.log(api);
+
 
         fetch(api)
             .then(response => {
@@ -18,6 +23,9 @@ if (navigator.geolocation) {
             })
             .then(data => {
                 console.log(data);
+                const weather = data.weather[0].main;
+                console.log(weather);
+
             });
     });
 }
