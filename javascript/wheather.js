@@ -11,22 +11,20 @@ if (navigator.geolocation) {
         latitudine = position.coords.latitude;
         const api = `api.openweathermap.org/data/2.5/weather?lat=${latitudine}&lon=${longitudine}&appid=${key}`;
         console.log(api);
+
+        fetch(api)
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                console.log(data);
+            });
     });
-} else {
-    console.log("in not supported");
 }
-/*
-apiObject = JSON.parse(api);
-console.log(api);
 
-fetch(api).then();
-
-function readApi() {}
-*/
 //  cambia background in base all'ora
 
-// let hour = new Date().getHours();
-let hour = 10;
+let hour = new Date().getHours();
 let alba = 8;
 let tramonto = 18;
 let mid = 14;
@@ -36,15 +34,15 @@ let blue;
 let firstColor;
 let secondColor;
 
-if (hour <= alba) {
+if (hour < alba) {
     red = 0;
     green = 0;
     blue = 100 + hour * 10;
     console.log("meno alba");
 } else if (hour < mid) {
-    red = (hour - alba) * 20;
-    green = (hour - alba) * 30;
-    blue = 100 + (hour - alba) * 20;
+    red = 60 + (hour - (alba - 1)) * 10;
+    green = 120 + (hour - (alba - 1)) * 10;
+    blue = 200 + (hour - (alba - 1)) * 2;
 
     console.log("meno mid");
 } else if (hour <= tramonto - 1) {
@@ -65,12 +63,14 @@ if (hour <= alba) {
 
     console.log("piu tramonto");
 }
-console.log(red, green, blue);
 console.log(hour);
 
 firstColor = `rgb(${red}, ${green},${blue})`;
-secondColor = `rgb(${red + 30}, ${green + 20},${blue - 20})`;
+secondColor = `rgb(${red + 40}, ${green + 30},${blue - 40})`;
 let gradient = `linear-gradient(to right bottom, ${firstColor}, ${secondColor})`;
+console.log(firstColor);
+console.log(secondColor);
 
 titleBackground.background = gradient;
+titleBackground.filter = `drop-shadow(3px 3px 20px ${secondColor})`;
 backgroundImage.background = gradient;

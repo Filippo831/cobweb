@@ -30,8 +30,6 @@
   padding: 1vh 4vw;
   border-radius: 10px;
   display: block;
-  -webkit-filter: drop-shadow(3px 3px 20px #7e43c2);
-          filter: drop-shadow(3px 3px 20px #7e43c2);
   background: opacity(0.5);
 }
 
