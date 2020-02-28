@@ -4,6 +4,12 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Poppins";
+  outline: none;
+  -webkit-tap-highlight-color: white;
+}
+
+body {
+  min-height: 100vh;
 }
 
 .navbar {
@@ -20,6 +26,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  height: 15vh;
 }
 
 .navbar .navbarUpper .title {
@@ -37,14 +44,37 @@
   text-align: center;
 }
 
-.navbar .navbarUpper .date {
+.navbar .navbarUpper .dateAndWeather {
+  margin-right: 5vw;
+}
+
+.navbar .navbarUpper .dateAndWeather .date {
   color: white;
   font-size: 25px;
-  margin-right: 5vw;
   font-weight: bold;
 }
 
+.navbar .navbarUpper .dateAndWeather .weatherInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .navbarUpper .dateAndWeather .weatherInfo img {
+  height: 25px;
+  width: 25px;
+}
+
+.navbar .navbarUpper .dateAndWeather .weatherInfo p {
+  font-size: 20px;
+}
+
 .navbar .calendar .calendarWeekDays {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,7 +82,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 23vh;
+  margin-top: 18vh;
 }
 
 .navbar .calendar .calendarWeekDays li {
@@ -131,6 +161,7 @@
   opacity: 0;
   background: #e7e7e7;
   border-radius: 10px;
+  display: none;
 }
 
 .input .inputDateDiv .listOfDay ul {
@@ -162,5 +193,6 @@
 
 .input button img {
   height: 70%;
+  width: 70%;
 }
 /*# sourceMappingURL=style.css.map */

@@ -2,8 +2,17 @@ let backgroundImage = document.querySelector(".navbar").style;
 let titleBackground = document.querySelector(".title").style;
 let longitudine;
 let latitudine;
+let displayTemperature = document.querySelector(".weatherTemperature");
+let weatherImage = document.querySelector(".weatherImage");
+let weatherSection = document.querySelector(".weatherInfo");
 
 
+let imageChange = {
+    Clear: '../immagini/sun.svg',
+    Cover: '../immagini/cloudSun.svg',
+    Cloudy: '../immagini/cloud.svg',
+    Rainy: '../immagini/rain.svg'
+}
 
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
@@ -13,7 +22,7 @@ if (navigator.geolocation) {
         latitudine = position.coords.latitude;
         const key = "074f76e00017c3f922cb5f58cdf8d984";
         const proxy = 'https://cors-anywhere.herokuapp.com/';
-        const api = `${proxy}api.openweathermap.org/data/2.5/weather?lat=${latitudine}&lon=${longitudine}&appid=${key}`;
+        const api = `${proxy}api.openweathermap.org/data/2.5/weather?&units=metric&lat=${latitudine}&lon=${longitudine}&appid=${key}`;
         console.log(api);
 
 
@@ -26,9 +35,19 @@ if (navigator.geolocation) {
                 const weather = data.weather[0].main;
                 console.log(weather);
 
+                displayTemperature.innerHTML = Math.round(data.main.temp_max) + '°C';
+                gsap.fromTo(weatherSection, {
+                    x: 100
+                }, {
+                    x: 0
+                })
+
+                weatherImage.innerHTML = `<img src="${Object.getOwnPropertyDescriptor(imageChange, weather).value}" alt="">`
+
             });
     });
 }
+
 
 //  cambia background in base all'ora
 
@@ -42,6 +61,8 @@ let blue;
 let firstColor;
 let secondColor;
 
+
+
 if (hour < alba) {
     red = 0;
     green = 0;
@@ -54,7 +75,7 @@ if (hour < alba) {
 
     console.log("meno mid");
 } else if (hour <= tramonto - 1) {
-    red = 50 + (hour - alba) * 12;
+    red = 50 + (hour - alba) * 7;
     green = 250 - (hour - alba) * 10;
     blue = 250 - (hour - alba) * 5;
     console.log("meno tramonto-1");

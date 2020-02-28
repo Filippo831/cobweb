@@ -3,6 +3,12 @@
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins";
+    outline: none;
+    -webkit-tap-highlight-color: white;
+}
+
+body {
+    min-height: 100vh;
 }
 
 .navbar {
@@ -12,6 +18,7 @@
         display: flex;
         align-items: baseline;
         justify-content: space-between;
+        height: 15vh;
 
         .title {
             margin-top: 2vh;
@@ -28,20 +35,43 @@
             }
         }
 
-        .date {
-            color: white;
-            font-size: 25px;
+        .dateAndWeather {
+
             margin-right: 5vw;
-            font-weight: bold;
+
+            .date {
+                color: white;
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            .weatherInfo {
+                display: flex;
+                color: white;
+                justify-content: space-between;
+
+                img {
+                    height: 25px;
+                    width: 25px;
+                }
+
+                p {
+                    font-size: 20px;
+
+                }
+            }
         }
+
     }
 
     .calendar {
         .calendarWeekDays {
+            position: relative;
             display: flex;
             margin: 0 3vw;
             justify-content: space-between;
-            margin-top: 23vh;
+            margin-top: 18vh;
+
 
             li {
                 list-style: none;
@@ -110,6 +140,7 @@
             opacity: 0;
             background: rgb(231, 231, 231);
             border-radius: 10px;
+            display: none;
 
             ul {
                 li {
@@ -141,7 +172,7 @@
 
         img {
             height: 70%;
-
+            width: 70%;
         }
     }
 }
