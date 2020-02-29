@@ -1,57 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/style.css" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+            rel="stylesheet"
+        />
+    </head>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
-</head>
-
-<body class="body">
-    <nav class="navbar">
-        <div class="navbarUpper">
-            <div class="title">
-                <h1>TODO LIST</h1>
-            </div>
-            <div class="dateAndWeather">
-                <p class="date"></p>
-                <div class="weatherInfo">
-                    <div class="weatherImage" src="" alt="s" class="weatherIcon">
-
+    <body class="body">
+        <nav class="navbar">
+            <div class="navbarUpper">
+                <div class="title">
+                    <h1>TODO LIST</h1>
+                </div>
+                <div class="dateAndWeather">
+                    <p class="date"></p>
+                    <div class="weatherInfo">
+                        <div
+                            class="weatherImage"
+                            src=""
+                            alt="s"
+                            class="weatherIcon"
+                        ></div>
+                        <p class="weatherTemperature"></p>
                     </div>
-                    <p class="weatherTemperature"></p>
                 </div>
             </div>
-        </div>
 
-        <div class="calendar">
-            <ul class="calendarWeekDays"></ul>
-        </div>
-    </nav>
-
-    <form action="" class="input">
-        <input class="textInput" type="text" name="inputText" placeholder="scrivi..." />
-        <div class="inputDateDiv">
-            <input class="dateInput" type="text" name="inputDate" placeholder="DAY" />
-            <div class="listOfDay">
-                <ul class="listOfDayUl"></ul>
+            <div class="calendar">
+                <ul class="calendarWeekDays"></ul>
             </div>
-        </div>
+        </nav>
 
-        <button class="submitForm">
-            <img src="../immagini/plus.svg" alt="">
-        </button>
-    </form>
+        <form action="" class="input">
+            <input
+                class="textInput"
+                type="text"
+                name="inputText"
+                placeholder="scrivi..."
+            />
+            <div class="inputDateDiv">
+                <input
+                    class="dateInput"
+                    type="text"
+                    name="inputDate"
+                    placeholder="DAY"
+                />
+                <div class="listOfDay">
+                    <ul class="listOfDayUl"></ul>
+                </div>
+            </div>
 
+            <button class="submitForm">
+                <img src="../immagini/plus.svg" alt="" />
+            </button>
+        </form>
+        <div class="separatorAddPost"></div>
+        <section class="posts"></section>
 
-    <script src="../javascript/days.js"></script>
-    <script src="../javascript/input.js"></script>
-    <script src="../javascript/general.js"></script>
-    <script src="../javascript/weather.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
-</body>
-
+        <script src="../javascript/output.js"></script>
+        <script src="../javascript/days.js"></script>
+        <script src="../javascript/input.js"></script>
+        <script src="../javascript/general.js"></script>
+        <script src="../javascript/weather.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.0/gsap.min.js"></script>
+    </body>
 </html>

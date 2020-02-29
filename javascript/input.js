@@ -1,4 +1,4 @@
-const JSON = '../JSON/promemoria.json'
+
 let textInput = document.querySelector(".textInput");
 let button = document.querySelector(".submitForm");
 button.addEventListener("click", event => {
@@ -18,10 +18,3 @@ button.addEventListener("click", event => {
 
 
 
-    fetch(JSON).then(response => {
-        return response.json()
-    }).then(data => {
-        console.log(data);
-        data.
-    })
-});

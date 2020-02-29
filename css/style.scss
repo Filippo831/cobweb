@@ -1,179 +1,233 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Poppins";
-  outline: none;
-  -webkit-tap-highlight-color: white;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    outline: none;
+    -webkit-tap-highlight-color: white;
 }
 
 body {
-  min-height: 199px;
+    min-height: 199px;
 }
 
 .navbar {
-  height: 40vh;
-  display: grid;
-  grid-template-rows: 90px auto 45px;
+    height: 40vh;
+    display: grid;
+    grid-template-rows: 90px auto 45px;
 
-  .navbarUpper {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-
-    .title {
-      margin-top: 2vh;
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-      margin-left: 1em;
-      padding: 1vh 4vw;
-      border-radius: 10px;
-      display: block;
-      background: opacity(0.5);
-
-      h1 {
-        text-align: center;
-      }
-    }
-
-    .dateAndWeather {
-      margin-right: 5vw;
-
-      .date {
-        color: white;
-        font-size: 25px;
-        font-weight: bold;
-      }
-
-      .weatherInfo {
+    .navbarUpper {
         display: flex;
-        color: white;
+        align-items: baseline;
         justify-content: space-between;
 
-        img {
-          height: 25px;
-          width: 25px;
+        .title {
+            margin-top: 2vh;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            margin-left: 1em;
+            padding: 1vh 4vw;
+            border-radius: 10px;
+            display: block;
+            background: opacity(0.5);
+
+            h1 {
+                text-align: center;
+            }
         }
 
-        p {
-          font-size: 20px;
+        .dateAndWeather {
+            margin-right: 5vw;
+
+            .date {
+                color: white;
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            .weatherInfo {
+                display: flex;
+                color: white;
+                justify-content: space-between;
+
+                img {
+                    height: 25px;
+                    width: 25px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+            }
         }
-      }
     }
-  }
 
-  .calendar {
-    position: relative;
-    margin: 0 3vw;
-    grid-row-start: 3;
+    .calendar {
+        position: relative;
+        margin: 0 3vw;
+        grid-row-start: 3;
 
+        .calendarWeekDays {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
 
+            li {
+                list-style: none;
+                padding: 3px;
+                padding-bottom: 5px;
 
-    .calendarWeekDays {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
+                h1 {
+                    font-size: 15px;
+                    color: white;
+                }
 
-      li {
-        list-style: none;
-        padding: 3px;
-        padding-bottom: 5px;
+                div {
+                    display: flex;
+                    justify-content: space-around;
 
-        h1 {
-          font-size: 15px;
-          color: white;
+                    div {
+                        content: none;
+                        height: 5px;
+                        width: 5px;
+                        background: white;
+                        border-radius: 50%;
+                    }
+                }
+            }
         }
-
-        div {
-          display: flex;
-          justify-content: space-around;
-
-          div {
-            content: none;
-            height: 5px;
-            width: 5px;
-            background: white;
-            border-radius: 50%;
-          }
-        }
-      }
     }
-  }
 }
 
 .input {
-  margin-top: 3vh;
-  padding: 0 5vw;
-  height: 30px;
-  justify-content: space-around;
-  align-items: center;
-  display: flex;
-  align-items: center;
-  width: 100vw;
-
-  input {
-    padding: 5px;
-    border: none;
-    background: rgb(231, 231, 231);
-    border-radius: 20px;
-    height: 100%;
-  }
-
-  .textInput {
-    padding: 5px 10px;
-    width: 60vw;
-  }
-
-  .inputDateDiv {
-    height: 100%;
+    margin-top: 3vh;
+    padding: 0 5vw;
+    height: 30px;
+    justify-content: space-around;
     align-items: center;
+    display: flex;
+    align-items: center;
+    width: 100vw;
 
-    .dateInput {
-      text-align: center;
-      width: 15vw;
+    input {
+        padding: 5px;
+        border: none;
+        background: rgb(231, 231, 231);
+        border-radius: 20px;
+        height: 100%;
     }
 
-    .listOfDay {
-      width: 15vw;
-      margin-top: 20px;
-      position: absolute;
-      text-align: center;
-      opacity: 0;
-      background: rgb(231, 231, 231);
-      border-radius: 10px;
-      display: none;
+    .textInput {
+        padding: 5px 10px;
+        width: 60vw;
+    }
 
-      ul {
-        li {
-          cursor: pointer;
-          list-style: none;
-          font-size: 20px;
-          margin-top: 0.5em;
+    .inputDateDiv {
+        height: 100%;
+        align-items: center;
+
+        .dateInput {
+            text-align: center;
+            width: 15vw;
         }
 
-        margin-bottom: 0.5em;
-      }
-    }
-  }
+        .listOfDay {
+            width: 15vw;
+            margin-top: 20px;
+            position: absolute;
+            text-align: center;
+            opacity: 0;
+            background: rgb(231, 231, 231);
+            border-radius: 10px;
+            display: none;
 
-  button {
-    cursor: pointer;
-    border: none;
-    width: 34px;
-    height: 34px;
-    background: linear-gradient(to left bottom,
-        #d978f4,
-        #959bff,
-        #3bb4ff,
-        #00c4ff,
-        #12cfeb);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
+            ul {
+                li {
+                    cursor: pointer;
+                    list-style: none;
+                    font-size: 20px;
+                    margin-top: 0.5em;
+                }
 
-    img {
-      height: 70%;
-      width: 70%;
+                margin-bottom: 0.5em;
+            }
+        }
     }
-  }
+
+    button {
+        cursor: pointer;
+        border: none;
+        width: 34px;
+        height: 34px;
+        background: linear-gradient(
+            to left bottom,
+            #d978f4,
+            #959bff,
+            #3bb4ff,
+            #00c4ff,
+            #12cfeb
+        );
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 70%;
+            width: 70%;
+        }
+    }
+}
+
+.separatorAddPost {
+    height: 20px;
+}
+
+.posts {
+    height: 80px;
+    filter: drop-shadow(0px 0px 10px #d4d4d4);
+    .postDiv {
+        height: 100%;
+        margin: 0 5%;
+        padding: 2% 5%;
+        padding-left: 4%;
+        border-radius: 20px;
+        justify-content: space-between;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        background: #dddddd;
+        .lineaSinistra {
+            content: "";
+            height: 50px;
+            width: 2px;
+            background: #727272;
+        }
+        .scritte {
+            height: 100%;
+            display: grid;
+            width: 75%;
+            grid-template-rows: 10px 15px auto;
+            padding-left: 1%;
+            .descrizione {
+                grid-row-start: 3;
+                p {
+                    line-height: 17px;
+                }
+            }
+        }
+        .modifica {
+            height: 100%;
+            align-items: center;
+            display: flex;
+            width: 17%;
+            justify-content: space-between;
+            img {
+                height: 25px;
+            }
+            .elimina,
+            .fatto {
+                height: 25px;
+            }
+        }
+    }
 }

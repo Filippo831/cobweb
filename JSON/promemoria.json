@@ -1,8 +1,28 @@
-[
-    "lun": [{
-            "ciao": "ciao a titto"
-        }
-
+{
+    "days": [
+        [
+            {
+                "description": "prendi l'insalata",
+                "id": 0,
+                "day": "MON"
+            },
+            {
+                "description": "taglia la legna",
+                "id": 0,
+                "day": "MON"
+            }
+        ],
+        [
+            {
+                "description": "vai a scuola asdfasdfsadfsadfsafasfasdf",
+                "id": 0,
+                "day": "TUE"
+            }
+        ],
+        [],
+        [],
+        [],
+        [],
+        []
     ]
-
-]
+}

@@ -205,4 +205,82 @@ body {
   height: 70%;
   width: 70%;
 }
+
+.separatorAddPost {
+  height: 20px;
+}
+
+.posts {
+  height: 80px;
+  -webkit-filter: drop-shadow(0px 0px 10px #d4d4d4);
+          filter: drop-shadow(0px 0px 10px #d4d4d4);
+}
+
+.posts .postDiv {
+  height: 100%;
+  margin: 0 5%;
+  padding: 2% 5%;
+  padding-left: 4%;
+  border-radius: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #dddddd;
+}
+
+.posts .postDiv .lineaSinistra {
+  content: "";
+  height: 50px;
+  width: 2px;
+  background: #727272;
+}
+
+.posts .postDiv .scritte {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  width: 75%;
+  -ms-grid-rows: 10px 15px auto;
+      grid-template-rows: 10px 15px auto;
+  padding-left: 1%;
+}
+
+.posts .postDiv .scritte .descrizione {
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+}
+
+.posts .postDiv .scritte .descrizione p {
+  line-height: 17px;
+}
+
+.posts .postDiv .modifica {
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 17%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.posts .postDiv .modifica img {
+  height: 25px;
+}
+
+.posts .postDiv .modifica .elimina,
+.posts .postDiv .modifica .fatto {
+  height: 25px;
+}
 /*# sourceMappingURL=style.css.map */
