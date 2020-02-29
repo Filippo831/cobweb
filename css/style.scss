@@ -1,178 +1,175 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins";
-    outline: none;
-    -webkit-tap-highlight-color: white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  outline: none;
+  -webkit-tap-highlight-color: white;
 }
-
 body {
-    min-height: 100vh;
+  min-height: 500px;
 }
 
 .navbar {
-    height: 40vh;
+  height: 40vh;
 
-    .navbarUpper {
+  .navbarUpper {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    height: 15vh;
+
+    .title {
+      margin-top: 2vh;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      margin-left: 1em;
+      padding: 1vh 4vw;
+      border-radius: 10px;
+      display: block;
+      background: opacity(0.5);
+
+      h1 {
+        text-align: center;
+      }
+    }
+
+    .dateAndWeather {
+      margin-right: 5vw;
+
+      .date {
+        color: white;
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .weatherInfo {
         display: flex;
-        align-items: baseline;
+        color: white;
         justify-content: space-between;
-        height: 15vh;
 
-        .title {
-            margin-top: 2vh;
-            color: rgb(255, 255, 255);
-            font-weight: bold;
-            margin-left: 1em;
-            padding: 1vh 4vw;
-            border-radius: 10px;
-            display: block;
-            background: opacity(0.5);
-
-            h1 {
-                text-align: center;
-            }
+        img {
+          height: 25px;
+          width: 25px;
         }
 
-        .dateAndWeather {
-
-            margin-right: 5vw;
-
-            .date {
-                color: white;
-                font-size: 25px;
-                font-weight: bold;
-            }
-
-            .weatherInfo {
-                display: flex;
-                color: white;
-                justify-content: space-between;
-
-                img {
-                    height: 25px;
-                    width: 25px;
-                }
-
-                p {
-                    font-size: 20px;
-
-                }
-            }
+        p {
+          font-size: 20px;
         }
-
+      }
     }
+  }
 
-    .calendar {
-        .calendarWeekDays {
-            position: relative;
-            display: flex;
-            margin: 0 3vw;
-            justify-content: space-between;
-            margin-top: 18vh;
+  .calendar {
+    .calendarWeekDays {
+      position: relative;
+      display: flex;
+      margin: 0 3vw;
+      justify-content: space-between;
+      margin-top: 18vh;
 
+      li {
+        list-style: none;
+        padding: 3px;
+        padding-bottom: 5px;
 
-            li {
-                list-style: none;
-                padding: 3px;
-                padding-bottom: 5px;
-
-                h1 {
-                    font-size: 15px;
-                    color: white;
-                }
-
-                div {
-                    display: flex;
-                    justify-content: space-around;
-
-                    div {
-                        content: none;
-                        height: 5px;
-                        width: 5px;
-                        background: white;
-                        border-radius: 50%;
-                    }
-                }
-            }
+        h1 {
+          font-size: 15px;
+          color: white;
         }
+
+        div {
+          display: flex;
+          justify-content: space-around;
+
+          div {
+            content: none;
+            height: 5px;
+            width: 5px;
+            background: white;
+            border-radius: 50%;
+          }
+        }
+      }
     }
+  }
 }
 
 .input {
-    margin-top: 3vh;
-    padding: 0 5vw;
-    height: 4vh;
-    justify-content: space-around;
+  margin-top: 3vh;
+  padding: 0 5vw;
+  height: 4vh;
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+
+  input {
+    padding: 5px;
+    border: none;
+    background: rgb(231, 231, 231);
+    border-radius: 20px;
+    height: 100%;
+  }
+
+  .textInput {
+    padding: 5px 10px;
+    width: 60vw;
+  }
+
+  .inputDateDiv {
+    height: 100%;
     align-items: center;
+
+    .dateInput {
+      text-align: center;
+      width: 15vw;
+    }
+
+    .listOfDay {
+      width: 15vw;
+      margin-top: 20px;
+      position: absolute;
+      text-align: center;
+      opacity: 0;
+      background: rgb(231, 231, 231);
+      border-radius: 10px;
+      display: none;
+
+      ul {
+        li {
+          cursor: pointer;
+          list-style: none;
+          font-size: 20px;
+          margin-top: 0.5em;
+        }
+
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+
+  button {
+    cursor: pointer;
+    border: none;
+    width: 34px;
+    height: 34px;
+    background: linear-gradient(
+      to left bottom,
+      #d978f4,
+      #959bff,
+      #3bb4ff,
+      #00c4ff,
+      #12cfeb
+    );
+    border-radius: 50%;
     display: flex;
-    align-items: center;
-    width: 100vw;
+    justify-content: center;
 
-    input {
-        padding: 5px;
-        border: none;
-        background: rgb(231, 231, 231);
-        border-radius: 20px;
-        height: 100%;
+    img {
+      height: 70%;
+      width: 70%;
     }
-
-    .textInput {
-        padding: 5px 10px;
-        width: 60vw;
-    }
-
-    .inputDateDiv {
-        height: 100%;
-        align-items: center;
-
-        .dateInput {
-            text-align: center;
-            width: 15vw;
-        }
-
-        .listOfDay {
-            width: 15vw;
-            margin-top: 20px;
-            position: absolute;
-            text-align: center;
-            opacity: 0;
-            background: rgb(231, 231, 231);
-            border-radius: 10px;
-            display: none;
-
-            ul {
-                li {
-                    cursor: pointer;
-                    list-style: none;
-                    font-size: 20px;
-                    margin-top: 0.5em;
-                }
-
-                margin-bottom: 0.5em;
-            }
-        }
-    }
-
-    button {
-        cursor: pointer;
-        border: none;
-        width: 34px;
-        height: 34px;
-        background: linear-gradient(to left bottom,
-                #d978f4,
-                #959bff,
-                #3bb4ff,
-                #00c4ff,
-                #12cfeb);
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-
-        img {
-            height: 70%;
-            width: 70%;
-        }
-    }
+  }
 }

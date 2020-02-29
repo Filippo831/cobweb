@@ -9,7 +9,7 @@ let weatherSection = document.querySelector(".weatherInfo");
 
 let imageChange = {
     Clear: '../immagini/sun.svg',
-    Cover: '../immagini/cloudSun.svg',
+    Clouds: '../immagini/cloudSun.svg',
     Cloudy: '../immagini/cloud.svg',
     Rainy: '../immagini/rain.svg'
 }
