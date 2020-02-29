@@ -16,14 +16,11 @@ let imageChange = {
 
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
-        console.log("HAI DATO I PERMESSI");
-        console.log(position);
         longitudine = position.coords.longitude;
         latitudine = position.coords.latitude;
         const key = "074f76e00017c3f922cb5f58cdf8d984";
         const proxy = 'https://cors-anywhere.herokuapp.com/';
         const api = `${proxy}api.openweathermap.org/data/2.5/weather?&units=metric&lat=${latitudine}&lon=${longitudine}&appid=${key}`;
-        console.log(api);
 
 
         fetch(api)
@@ -97,8 +94,6 @@ console.log(hour);
 firstColor = `rgb(${red}, ${green},${blue})`;
 secondColor = `rgb(${red + 40}, ${green + 30},${blue - 40})`;
 let gradient = `linear-gradient(to right bottom, ${firstColor}, ${secondColor})`;
-console.log(firstColor);
-console.log(secondColor);
 
 titleBackground.background = gradient;
 titleBackground.filter = `drop-shadow(3px 3px 20px ${secondColor})`;

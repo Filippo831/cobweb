@@ -8,8 +8,16 @@
   -webkit-tap-highlight-color: white;
 }
 
+body {
+  min-height: 199px;
+}
+
 .navbar {
-  height: 40%;
+  height: 40vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 90px auto 45px;
+      grid-template-rows: 90px auto 45px;
 }
 
 .navbar .navbarUpper {
@@ -22,7 +30,6 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 15vh;
 }
 
 .navbar .navbarUpper .title {
@@ -69,16 +76,23 @@
   font-size: 20px;
 }
 
-.navbar .calendar .calendarWeekDays {
+.navbar .calendar {
   position: relative;
+  margin: 0 3vw;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+}
+
+.navbar .calendar .calendarWeekDays {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 3vw;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 18vh;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .navbar .calendar .calendarWeekDays li {
@@ -111,7 +125,7 @@
 .input {
   margin-top: 3vh;
   padding: 0 5vw;
-  height: 4vh;
+  height: 30px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;

@@ -1,5 +1,4 @@
-let PostArray = [];
-
+const JSON = '../JSON/promemoria.json'
 let textInput = document.querySelector(".textInput");
 let button = document.querySelector(".submitForm");
 button.addEventListener("click", event => {
@@ -13,8 +12,16 @@ button.addEventListener("click", event => {
         inputText,
         inputDate
     };
-    PostArray.push(newObjectList);
     console.log(newObjectList);
     dateInput.value = "";
     textInput.value = "";
+
+
+
+    fetch(JSON).then(response => {
+        return response.json()
+    }).then(data => {
+        console.log(data);
+        data.
+    })
 });

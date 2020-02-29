@@ -7,15 +7,19 @@
   -webkit-tap-highlight-color: white;
 }
 
+body {
+  min-height: 199px;
+}
 
 .navbar {
-  height: 40%;
+  height: 40vh;
+  display: grid;
+  grid-template-rows: 90px auto 45px;
 
   .navbarUpper {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    height: 15vh;
 
     .title {
       margin-top: 2vh;
@@ -59,12 +63,16 @@
   }
 
   .calendar {
+    position: relative;
+    margin: 0 3vw;
+    grid-row-start: 3;
+
+
+
     .calendarWeekDays {
-      position: relative;
       display: flex;
-      margin: 0 3vw;
       justify-content: space-between;
-      margin-top: 18vh;
+      align-items: baseline;
 
       li {
         list-style: none;
@@ -96,7 +104,7 @@
 .input {
   margin-top: 3vh;
   padding: 0 5vw;
-  height: 4vh;
+  height: 30px;
   justify-content: space-around;
   align-items: center;
   display: flex;
@@ -153,14 +161,12 @@
     border: none;
     width: 34px;
     height: 34px;
-    background: linear-gradient(
-      to left bottom,
-      #d978f4,
-      #959bff,
-      #3bb4ff,
-      #00c4ff,
-      #12cfeb
-    );
+    background: linear-gradient(to left bottom,
+        #d978f4,
+        #959bff,
+        #3bb4ff,
+        #00c4ff,
+        #12cfeb);
     border-radius: 50%;
     display: flex;
     justify-content: center;
