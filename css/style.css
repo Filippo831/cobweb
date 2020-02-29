@@ -8,12 +8,8 @@
   -webkit-tap-highlight-color: white;
 }
 
-body {
-  min-height: 500px;
-}
-
 .navbar {
-  height: 40vh;
+  height: 40%;
 }
 
 .navbar .navbarUpper {
