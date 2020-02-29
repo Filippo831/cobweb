@@ -1,4 +1,3 @@
-
 let textInput = document.querySelector(".textInput");
 let button = document.querySelector(".submitForm");
 button.addEventListener("click", event => {
@@ -15,6 +14,4 @@ button.addEventListener("click", event => {
     console.log(newObjectList);
     dateInput.value = "";
     textInput.value = "";
-
-
-
+});

@@ -6,22 +6,20 @@ let displayTemperature = document.querySelector(".weatherTemperature");
 let weatherImage = document.querySelector(".weatherImage");
 let weatherSection = document.querySelector(".weatherInfo");
 
-
 let imageChange = {
-    Clear: '../immagini/sun.svg',
-    Clouds: '../immagini/cloudSun.svg',
-    Cloudy: '../immagini/cloud.svg',
-    Rainy: '../immagini/rain.svg'
-}
+    Clear: "../immagini/sun.svg",
+    Clouds: "../immagini/cloudSun.svg",
+    Cloudy: "../immagini/cloud.svg",
+    Rainy: "../immagini/rain.svg"
+};
 
 if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
         longitudine = position.coords.longitude;
         latitudine = position.coords.latitude;
         const key = "074f76e00017c3f922cb5f58cdf8d984";
-        const proxy = 'https://cors-anywhere.herokuapp.com/';
+        const proxy = "https://cors-anywhere.herokuapp.com/";
         const api = `${proxy}api.openweathermap.org/data/2.5/weather?&units=metric&lat=${latitudine}&lon=${longitudine}&appid=${key}`;
-
 
         fetch(api)
             .then(response => {
@@ -32,19 +30,24 @@ if (navigator.geolocation) {
                 const weather = data.weather[0].main;
                 console.log(weather);
 
-                displayTemperature.innerHTML = Math.round(data.main.temp_max) + '°C';
-                gsap.fromTo(weatherSection, {
-                    x: 100
-                }, {
-                    x: 0
-                })
+                displayTemperature.innerHTML =
+                    Math.round(data.main.temp_max) + "°C";
+                gsap.fromTo(
+                    weatherSection,
+                    {
+                        x: 100
+                    },
+                    {
+                        x: 0
+                    }
+                );
 
-                weatherImage.innerHTML = `<img src="${Object.getOwnPropertyDescriptor(imageChange, weather).value}" alt="">`
-
+                weatherImage.innerHTML = `<img src="${
+                    Object.getOwnPropertyDescriptor(imageChange, weather).value
+                }" alt="">`;
             });
     });
 }
-
 
 //  cambia background in base all'ora
 
@@ -57,8 +60,6 @@ let green;
 let blue;
 let firstColor;
 let secondColor;
-
-
 
 if (hour < alba) {
     red = 0;

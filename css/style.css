@@ -10,6 +10,8 @@
 
 body {
   min-height: 199px;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -164,6 +166,7 @@ body {
 }
 
 .input .inputDateDiv .listOfDay {
+  z-index: 3;
   width: 15vw;
   margin-top: 20px;
   position: absolute;
@@ -188,8 +191,8 @@ body {
 .input button {
   cursor: pointer;
   border: none;
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   background: -webkit-gradient(linear, right top, left bottom, from(#d978f4), color-stop(#959bff), color-stop(#3bb4ff), color-stop(#00c4ff), to(#12cfeb));
   background: linear-gradient(to left bottom, #d978f4, #959bff, #3bb4ff, #00c4ff, #12cfeb);
   border-radius: 50%;
@@ -225,7 +228,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
