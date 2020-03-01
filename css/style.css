@@ -5,11 +5,13 @@
           box-sizing: border-box;
   font-family: "Poppins";
   outline: none;
+  scroll-behavior: smooth;
   -webkit-tap-highlight-color: white;
 }
 
-body {
-  min-height: 199px;
+body,
+html {
+  min-height: 130vh;
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -219,7 +221,11 @@ body {
           filter: drop-shadow(0px 0px 10px #d4d4d4);
 }
 
-.posts .postDiv {
+.posts .divisionePost {
+  height: 100%;
+}
+
+.posts .divisionePost .postDiv {
   height: 100%;
   margin: 0 5%;
   padding: 2% 5%;
@@ -238,14 +244,14 @@ body {
   background: #dddddd;
 }
 
-.posts .postDiv .lineaSinistra {
+.posts .divisionePost .postDiv .lineaSinistra {
   content: "";
   height: 50px;
   width: 2px;
   background: #727272;
 }
 
-.posts .postDiv .scritte {
+.posts .divisionePost .postDiv .scritte {
   height: 100%;
   display: -ms-grid;
   display: grid;
@@ -255,16 +261,16 @@ body {
   padding-left: 1%;
 }
 
-.posts .postDiv .scritte .descrizione {
+.posts .divisionePost .postDiv .scritte .descrizione {
   -ms-grid-row: 3;
       grid-row-start: 3;
 }
 
-.posts .postDiv .scritte .descrizione p {
+.posts .divisionePost .postDiv .scritte .descrizione p {
   line-height: 17px;
 }
 
-.posts .postDiv .modifica {
+.posts .divisionePost .postDiv .modifica {
   height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -272,18 +278,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 17%;
+  width: 10%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.posts .postDiv .modifica img {
+.posts .divisionePost .postDiv .modifica img {
   height: 25px;
 }
 
-.posts .postDiv .modifica .elimina,
-.posts .postDiv .modifica .fatto {
+.posts .divisionePost .postDiv .modifica .elimina {
   height: 25px;
 }
 /*# sourceMappingURL=style.css.map */

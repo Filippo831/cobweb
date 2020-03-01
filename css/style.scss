@@ -4,11 +4,13 @@
     box-sizing: border-box;
     font-family: "Poppins";
     outline: none;
+    scroll-behavior: smooth;
     -webkit-tap-highlight-color: white;
 }
 
-body {
-    min-height: 199px;
+body,
+html {
+    min-height: 130vh;
     max-width: 100vw;
     overflow-x: hidden;
 }
@@ -188,48 +190,50 @@ body {
 .posts {
     height: 80px;
     filter: drop-shadow(0px 0px 10px #d4d4d4);
-    .postDiv {
+    .divisionePost {
         height: 100%;
-        margin: 0 5%;
-        padding: 2% 5%;
-        padding-left: 4%;
-        border-radius: 20px;
-        justify-content: space-between;
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
-        background: #dddddd;
-        .lineaSinistra {
-            content: "";
-            height: 50px;
-            width: 2px;
-            background: #727272;
-        }
-        .scritte {
+        .postDiv {
             height: 100%;
-            display: grid;
-            width: 75%;
-            grid-template-rows: 10px 15px auto;
-            padding-left: 1%;
-            .descrizione {
-                grid-row-start: 3;
-                p {
-                    line-height: 17px;
+            margin: 0 5%;
+            padding: 2% 5%;
+            padding-left: 4%;
+            border-radius: 20px;
+            justify-content: space-between;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            background: #dddddd;
+            .lineaSinistra {
+                content: "";
+                height: 50px;
+                width: 2px;
+                background: #727272;
+            }
+            .scritte {
+                height: 100%;
+                display: grid;
+                width: 75%;
+                grid-template-rows: 10px 15px auto;
+                padding-left: 1%;
+                .descrizione {
+                    grid-row-start: 3;
+                    p {
+                        line-height: 17px;
+                    }
                 }
             }
-        }
-        .modifica {
-            height: 100%;
-            align-items: center;
-            display: flex;
-            width: 17%;
-            justify-content: space-between;
-            img {
-                height: 25px;
-            }
-            .elimina,
-            .fatto {
-                height: 25px;
+            .modifica {
+                height: 100%;
+                align-items: center;
+                display: flex;
+                width: 10%;
+                justify-content: space-between;
+                img {
+                    height: 25px;
+                }
+                .elimina {
+                    height: 25px;
+                }
             }
         }
     }

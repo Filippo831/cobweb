@@ -1,9 +1,9 @@
 //  set the current date
 let weekDay = new Date().getUTCDay();
-let days = ["LUN", "MAR", "MER", "GIO", "VEN", "SAB", "DOM"];
+let days = ["DOM", "LUN", "MAR", "MER", "GIO", "VEN", "SAB"];
 let monthDay = new Date().getDate();
 let dateOutput = document.querySelector(".date");
-dateOutput.innerHTML = `${days[weekDay - 1]} ${monthDay}`;
+dateOutput.innerHTML = `${days[weekDay]} ${monthDay}`;
 
 //  set the caledar with appointments
 let calendar = document.querySelector(".calendarWeekDays");
@@ -13,7 +13,7 @@ days.forEach((day, index) => {
         newElement.style.borderBottom = "white 2px solid";
     }
     newElement.innerHTML = `<h1 class="${days[index]}">${days[index]}</h1>
-    <div class="appuntamenti"><div></div></div>`;
+    <div class="appuntamenti"></div>`;
     calendar.appendChild(newElement);
 });
 

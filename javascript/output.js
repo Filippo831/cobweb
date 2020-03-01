@@ -29,9 +29,6 @@ fetch(JSON)
                     </div>
                 </div>
                 <div class="modifica">
-                    <div class="fatto">
-                        <img src="../immagini/tick.svg" alt="" />
-                    </div>
                     <div class="elimina">
                         <img src="../immagini/stop.svg" alt="" />
                     </div>
@@ -43,6 +40,7 @@ fetch(JSON)
             });
         });
     })
+
     .then(() => {
         let singlePost = document.querySelectorAll(".divisionePost");
 
@@ -73,13 +71,38 @@ fetch(JSON)
                 window.scrollTo(0, 0);
                 offset = positionX - event.touches[0].clientX;
                 if (offset > 50) {
-                    gsap.to(post, {
-                        x: -800,
-                        duration: 0.3
-                    }).then(() => {
-                        post.style.display = "none";
-                    });
+                    deletePost(singlePost, index);
                 }
+            });
+            let cross = document.querySelectorAll(".elimina");
+            cross.forEach((cros, index) => {
+                cros.addEventListener("click", () => {
+                    deletePost(singlePost, index);
+                });
             });
         });
     });
+
+function deletePost(singlePost, index) {
+    console.log(index);
+
+    gsap.to(singlePost[index], {
+        x: -800,
+        duration: 0.3
+    }).then(() => {
+        singlePost[index].style.display = "none";
+
+        for (let a = index + 1; a < singlePost.length; a++) {
+            gsap.fromTo(
+                singlePost[a],
+                {
+                    y: 80
+                },
+                {
+                    y: 0,
+                    duration: 0.3
+                }
+            );
+        }
+    });
+}
