@@ -75,7 +75,7 @@ fetch(JSON)
                 if (offset > 50) {
                     gsap.to(post, {
                         x: -800,
-                        duration: 0.3
+                        duration: 0.5
                     }).then(() => {
                         post.style.display = "none";
                     });
